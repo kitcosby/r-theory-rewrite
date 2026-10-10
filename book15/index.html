@@ -298,7 +298,7 @@ cosmology follows. <a class="taglink" href="../ledger/#tag-MA" title="Status key
 The upstream audit vol3/book15/audit_book15.py (240 assertions, all passed; tolerances 1e-6–1e-12, with
 symbolic spot checks for the 15.IV core reduction and the 15.V projector/generator identities; full ledger
 vol3/book15/LEDGER.md) stands as provenance. The rewrite adds validation/book15/verify_book15.py —
-220 assertions, all passing, no timeouts — covering every checkable page claim with exact (sympy / exact
+230 checks (220 CP/SC, 10 other), all passing, no timeouts — covering every checkable page claim with exact (sympy / exact
 integer) checks where the mathematics permits them, and validation/book15/test_embeds.py — 13 assertions
 on graph↔fallback↔caption consistency. Worst measured numerical error across the new suite: 2.5e-8,
 confined to (1−cos x)/sin x-type reciprocal forms near seams (floating-point cancellation; the identities
@@ -506,7 +506,7 @@ inheriting any of these from the mathematics alone.</li>
 </ul>
 <p>No incorrect (<a class="taglink" href="../ledger/#tag-IC" title="Status key: incorrect result"><span class="tag IC">IC</span></a>) and no incomplete (<a class="taglink" href="../ledger/#tag-IN" title="Status key: incomplete or failed computation"><span class="tag IN">IN</span></a>) claims were
 found in Book 15. The upstream audit's 240 assertions all passed, and the rewrite's two new suites pass
-completely (220 verification assertions + 13 embed-consistency assertions, no timeouts, worst measured
+completely (230 verification checks — 220 CP/SC, 10 other — + 13 embed-consistency assertions, no timeouts, worst measured
 error 2.5e-8 on cancellation-prone reciprocal forms near seams). The two subtle spots (exact Saw reduction
 on the positive chart; λ=(1−p)/2 staying in [0,1] via |p|≤1 on every open quadrant) both check out.
 One incorrect caption was found and fixed during this cleanup (Figure 1 mislabeled the four primitives
@@ -556,7 +556,8 @@ only, not by browser rendering — the author cannot operate a live browser; PNG
 
 <p>Rewrite status: all pictured identities were re-verified against the source — primitive interchange, hyperbola,
 double-angle phasor, Saw complement, Bloch meridian, native doublet, quarter-turn, dual-involution bigrading,
-bridge polarization, even-exterior minimum, round-trip normalization, and the E8 30380 citation — 220 assertions
+bridge polarization, even-exterior minimum, round-trip normalization, and the E8 30380 citation — 230 checks
+(220 CP/SC, 10 other)
 in validation/book15/verify_book15.py, all passing, no timeouts. Worst measured error 2.5e-8, confined to the
 (1−cos x)/sin x-type reciprocal forms near seams (pure floating-point cancellation in the grid check; the
 identities are exact algebra); the 15.VII witnesses and the E8 citation were verified exactly (sympy / exact
