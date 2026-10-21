@@ -442,9 +442,17 @@ connection transformation law, <span class="math">F = dA + A∧A</span>, Bianchi
 <span class="math">A = −dUU⁻¹</span> gives <span class="math">F = 0</span> (Maurer–Cartan) — local basis
 variation alone produces no force.
 <span class="tag cert">STANDARD IMPORTED THEOREM</span> <b>11.PG.V:</b> non-Abelian curvature term.
-<span class="tag note">MANUSCRIPT ASSERTION</span> <span class="tag niv">not independently verified</span> <b>11.PG.VI:</b> minimal Yang–Mills candidate
+<span class="tag cert">COMPLETED SYMBOLIC CHECK</span> <b>11.PG.VI:</b> minimal Yang–Mills candidate
 <span class="math">S_YM = −(1/2g²)∫tr(F∧∗F)</span> within a stated candidate class; "candidate-class
-uniqueness" is asserted, not proved here.
+uniqueness" independently checked in the Volume II audit, session 2 (2026-10-20;
+<code>validation/book11/check_book11_pgvi.py</code>, 6/6 exact linear-algebra checks): the
+Ad-invariant symmetric bilinear forms on su(2) form exactly a 1-dimensional space (∝ δ<sub>ab</sub>),
+tr(T<sub>a</sub>) = 0 (no linear-F term), and the Lorentz-invariant quadratic forms on a 2-form are
+exactly 2-dimensional, spanned by F∧∗F and the θ term F∧F. The remaining classification step —
+locality and gauge invariance force the density to be a function of F alone at two-derivative
+order (DF ≡ 0, Bianchi identity) — is the written argument recorded in the audit ledger.
+Uniqueness within the class is now checked; this is still not a derivation of weak dynamics,
+and g, θ, and the Lorentzian host remain declared structure.
 <span class="tag cert">CHECKED PROOF</span> <b>Negative Theorem 11.PG.N2:</b> no gauge-invariant bare
 Proca mass term in the exact unbroken theory.
 <span class="tag cert">STANDARD IMPORTED THEOREM</span> <b>11.PG.VII:</b> <span class="math">2⊗2 = 3⊕1</span>,
