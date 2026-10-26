@@ -212,9 +212,7 @@ the formal audit second. Every claim carries exactly one status:
 <a class="taglink" href="../ledger/#tag-IN" title="Status key: incomplete or failed computation"><span class="tag IN">IN</span></a> incomplete or failed computation, <a class="taglink" href="../ledger/#tag-IC" title="Status key: incorrect result"><span class="tag IC">IC</span></a> incorrect result.
 A sampled numerical agreement is a completed numerical check, never a proof.</i></p>
 <p class="small"><b>Cleanup status (2026-09-19).</b> Every checkable claim on this page is verified by
-<span class="formula">validation/book16/verify_book16.py</span>: 164 independent checks
-(CP 98 · SC 21 · NC 45), all passing with no timeouts; the five original audit suites
-(audit_16a&ndash;e) re-run to 690/690 passing. Worst measured numerical discrepancy:
+<span class="formula">validation/book16/verify_book16.py</span>: 164 independent checks, all passing with no timeouts; the five original audit suites (audit_16a&ndash;e) re-run to 690/690 passing. Claim tallies on this page were reconciled on 2026-10-26 against the R Theory database, the source of record: Book 16 carries 361 ledgered rows (CP 140 &middot; SC 19 &middot; NC 73 &middot; ST 5 &middot; MA 117 &middot; AX 2 &middot; IC 4 &middot; IN 1); an earlier CP/SC/NC split of the 164 checks, and the 495-claim tally formerly in the Publication ledger, are superseded by that count. Worst measured numerical discrepancy:
 1.6&times;10<sup>&minus;4</sup>, from caption markers quoted to three decimals (recomputed values
 agree to that precision). Embeds are verified by
 <span class="formula">validation/book16/test_embeds.py</span>: 15 graph divs &#8596; 15 Desmos
@@ -1410,17 +1408,15 @@ microscopic parent) stays open and unbuilt.</p>
 <ul>
 <li><b>Book 14</b> establishes the two-fermion mass geometry: the rapidity coordinate q_m=tanh(λ_m/2), the pair
 invariant in two exact forms, the continued invariant, and the bound-mass identities (50 assertions, all pass).
-<a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a> 19 · <a class="taglink" href="../ledger/#tag-NC" title="Status key: completed numerical check"><span class="tag NC">NC</span></a> 1 · <a class="taglink" href="../ledger/#tag-ST" title="Status key: standard imported theorem"><span class="tag ST">ST</span></a> 3 ·
-<a class="taglink" href="../ledger/#tag-MA" title="Status key: manuscript assertion"><span class="tag MA">MA</span></a> 10. The Dirac–Coulomb bridge equality is proved conditional on its declared import.</li>
+<a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a> 20 · <a class="taglink" href="../ledger/#tag-NC" title="Status key: completed numerical check"><span class="tag NC">NC</span></a> 1 · <a class="taglink" href="../ledger/#tag-ST" title="Status key: standard imported theorem"><span class="tag ST">ST</span></a> 3 ·
+<a class="taglink" href="../ledger/#tag-MA" title="Status key: manuscript assertion"><span class="tag MA">MA</span></a> 12. The Dirac–Coulomb bridge equality is proved conditional on its declared import.</li>
 <li><b>Book 15</b> establishes the Saw calculus: complementation vs product duality, the Saw reduction
 sawup=ελ proved symbolically, and the double-angle decomposition (240 assertions, all pass).
 <a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a> 27 · <a class="taglink" href="../ledger/#tag-SC" title="Status key: completed symbolic check"><span class="tag SC">SC</span></a> 1 · <a class="taglink" href="../ledger/#tag-NC" title="Status key: completed numerical check"><span class="tag NC">NC</span></a> 4 ·
-<a class="taglink" href="../ledger/#tag-MA" title="Status key: manuscript assertion"><span class="tag MA">MA</span></a> 14. The E8(−24) host and all physical identifications are admitted input.</li>
+<a class="taglink" href="../ledger/#tag-MA" title="Status key: manuscript assertion"><span class="tag MA">MA</span></a> 15. The E8(−24) host and all physical identifications are admitted input.</li>
 <li><b>Book 16</b> establishes the arithmetic spine and the quadratic zero-form firewall described in Parts I–IV
-above (690 assertions across five check scripts, all pass; 495 ledgered claims:
-<a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a> 141 · <a class="taglink" href="../ledger/#tag-SC" title="Status key: completed symbolic check"><span class="tag SC">SC</span></a> 84 · <a class="taglink" href="../ledger/#tag-NC" title="Status key: completed numerical check"><span class="tag NC">NC</span></a> 105 ·
-<a class="taglink" href="../ledger/#tag-ST" title="Status key: standard imported theorem"><span class="tag ST">ST</span></a> 7 · <a class="taglink" href="../ledger/#tag-MA" title="Status key: manuscript assertion"><span class="tag MA">MA</span></a> 149 · <a class="taglink" href="../ledger/#tag-AX" title="Status key: assumption or axiom"><span class="tag AX">AX</span></a> 2 ·
-<a class="taglink" href="../ledger/#tag-IC" title="Status key: incorrect result"><span class="tag IC">IC</span></a> 7; per-chunk ledgers LEDGER_a–e.md in the audit workspace). The
+above (690 assertions across five check scripts, all pass; 361 ledgered claims in the R Theory database (reconciled 2026-10-26): <a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a> 140 · <a class="taglink" href="../ledger/#tag-SC" title="Status key: completed symbolic check"><span class="tag SC">SC</span></a> 19 · <a class="taglink" href="../ledger/#tag-NC" title="Status key: completed numerical check"><span class="tag NC">NC</span></a> 73 · <a class="taglink" href="../ledger/#tag-ST" title="Status key: standard imported theorem"><span class="tag ST">ST</span></a> 5 · <a class="taglink" href="../ledger/#tag-MA" title="Status key: manuscript assertion"><span class="tag MA">MA</span></a> 117 · <a class="taglink" href="../ledger/#tag-AX" title="Status key: assumption or axiom"><span class="tag AX">AX</span></a> 2 ·
+<a class="taglink" href="../ledger/#tag-IC" title="Status key: incorrect result"><span class="tag IC">IC</span></a> 4 · <a class="taglink" href="../ledger/#tag-IN" title="Status key: incomplete or failed computation"><span class="tag IN">IN</span></a> 1; per-chunk ledgers LEDGER_a–e.md in the audit workspace). The
 representation theory behind the firewall was independently rerun in the Volume III audit (sessions 2–3, 2026-10-21) and is CHECKED (exact); the
 microscopic parent, normalization, and all action-level gates remain open.</li>
 </ul>
