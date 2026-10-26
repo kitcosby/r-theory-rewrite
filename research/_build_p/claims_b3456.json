@@ -46,7 +46,7 @@
   "claim": "First run returned {0:1, 48:1820, 64:6307, 128:128} \u2014",
   "ledger_status": "INVALID",
   "site_code": "IC",
-  "basis": "because",
+  "basis": "because matrix assembly double-counted diagonal (p=q) symmetric-basis inputs.",
   "source": "theorem_ledger.md"
  },
  {
@@ -56,7 +56,7 @@
   "claim": "Generators are anti-Hermitian: max |A + A\u2020| = 0.0 (",
   "ledger_status": "CHECKED",
   "site_code": "NC",
-  "basis": "); they are",
+  "basis": "); they are NOT real antisymmetric: |A + A\u1d40| error 1.0 (CHECKED). This property is what makes the manuscript's Module 8 formula inapplicable (see below).",
   "source": "theorem_ledger.md"
  },
  {
