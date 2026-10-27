@@ -383,8 +383,15 @@ minimality, and reversal-invariance of the metric cost are standard linear-respo
 results, stated as approximations and correctly labeled as measuring dissipation cost without choosing a
 temporal direction. <a class="taglink" href="../ledger/#tag-ST" title="Status key: standard imported theorem"><span class="tag ST">ST</span></a></p>
 <p><b>Incomplete statement (source).</b> "for protocol duration τ, Sigma_prod &gt;= ^2." — the right-hand side's
-numerator is missing as printed (the intended Cauchy–Schwarz bound, e.g. k<sub>B</sub>(Δφ<sub>F</sub>)²/(γτ),
-is not stated). Cannot be verified as printed. <a class="taglink" href="../ledger/#tag-IN" title="Status key: incomplete or failed computation"><span class="tag IN">IN</span></a></p>
+numerator is missing as printed and the bound cannot be verified as printed. <a class="taglink" href="../ledger/#tag-IN" title="Status key: incomplete or failed computation"><span class="tag IN">IN</span></a></p>
+<p><b>Reconstruction (adopted 2026-10-26).</b> The section itself prints both premises flanking the gap: the
+Fisher-form rate σ̇ ≈ (k<sub>B</sub>/γ)φ̇<sub>F</sub>² (above) and the statement that minimum leading dissipation
+between fixed endpoints is attained by constant Fisher speed. Integrating the printed rate over the protocol
+duration τ and applying Cauchy–Schwarz, ∫φ̇<sub>F</sub>² dt ≥ (Δφ<sub>F</sub>)²/τ — with equality exactly at
+constant φ̇<sub>F</sub>, the printed condition — forces the unique completion
+<span class="formula">Sigma_prod ≥ (k<sub>B</sub>/γ)(Δφ<sub>F</sub>)²/τ</span> at leading order. The derivation
+step is exact, conditional on the printed Fisher-form premise (itself a leading-order approximation, tagged ST
+above); the manuscript is unchanged and still prints the bound incomplete. <a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a></p>
 
 <h3 id="13-v-cycle-affinity-seams-hidden-state-identifiability">13.V — Cycle affinity, seams, hidden-state identifiability</h3>
 <p>Exact-potential affinities telescope to zero around closed cycles: elementary. <a class="taglink" href="../ledger/#tag-CP" title="Status key: checked proof"><span class="tag CP">CP</span></a>
