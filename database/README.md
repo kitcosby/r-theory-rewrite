@@ -1,6 +1,8 @@
-# R Theory database dump — 2026-09-30
+# R Theory database dump — 2026-11-04
 
 Per-table SQL dumps of `rtheory.db` (SQLite), zipped and split for upload.
+Snapshot of the live database at refresh time: 1,141 theorems, 199 dependency
+edges, 283 terms.
 
 ## Contents
 11 tables: theorems, status_codes, theorem_deps, prose, prose_theorems,
