@@ -34,6 +34,8 @@ required); if Desmos fails to load, static PNG fallbacks in each book's
 - `research/` — research companion notes
 - `validation/` — the numbered audit scripts behind the pages
   (PROVED / CHECKED / ASSERTED / INCOMPLETE)
+- `works-cited/` — master bibliography and source register, including
+  reviewed literature matches
 - `database/` — R Theory database snapshot (per-table SQL, reassemble
   script, SAD architecture diagrams)
 - `manuscript/`, `pdf/` — source snapshots
@@ -58,6 +60,18 @@ mathematics supports.
 - **Volume II** (Books 7–13) — independent audit complete.
 - **Volume III** (Books 14–16) — independent audit complete.
 - **Volume IV** (Books 17–19) — audit in progress.
+
+The page-level scripts in `validation/` currently cover Books 0–19 and the
+Volume IV overview. Books 20–24 are not represented by those per-book
+validation folders; their status labels remain governed by the evidence
+published on the pages and in the research records.
+
+The separate [euclid-proofs](https://github.com/kitcosby/euclid-proofs)
+repository holds the claim-by-claim Euclid/extension-proof archive and its
+own cumulative trigonometric proof ledgers. It is a complementary audit
+corpus, not a duplicate of the page-level scripts in `validation/`.
+Keep its ledgers and source records in that repository unless a future,
+reviewed migration establishes a clear benefit.
 
 ## Status (2026-11-04)
 
