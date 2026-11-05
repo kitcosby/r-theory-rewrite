@@ -10,13 +10,13 @@ The canonical repository remains `kitcosby/r-theory-rewrite` on `main`. All work
 
 Codex is the pipeline operator:
 
-1. **Observe** — inspect repository state, recent commits, open issues and pull requests, research notes, validation coverage, and bibliography records.
+1. **Observe** — inspect repository state, recent commits, open and closed issues and pull requests, research notes, validation coverage, bibliography records, and existing automation.
 2. **Triage** — identify new, stale, blocked, duplicated, or unowned work.
 3. **Discover** — identify specific proof obligations, counterexample opportunities, missing validation, and relevant literature.
-4. **Populate** — create or update a backlog issue only when the item is distinct, actionable, evidence-backed, and has a closure criterion.
-5. **Execute** — perform bounded repository tasks on an isolated branch/worktree; implement tests or documentation where authorized.
+4. **Populate** — create GitHub issues for distinct, actionable, evidence-backed work, with explicit deduplication and closure criteria.
+5. **Execute** — perform bounded repository tasks on an isolated branch/worktree; implement tests or documentation only within the stated authorization.
 6. **Verify** — run relevant checks and record exact evidence without upgrading mathematical status beyond what the checks establish.
-7. **Report** — leave a dated operational report and identify the next highest-value task.
+7. **Report** — provide a dated operational report, link issues actually created, summarize deduplication, and identify blockers and the next highest-value task.
 
 ## Responsibilities and boundaries
 
@@ -42,7 +42,7 @@ Read these before making pipeline decisions:
 - `works-cited/index.html` — bibliography structure and literature-review policy.
 - `scanner/README.md` — existing polish scanner; do not duplicate or silently repurpose it.
 
-Important: the repository's architecture document describes a static site plus audit tooling, not an already-established general-purpose CI/research scheduler. The existing daily `rewrite-polish-scanner` is a separate process. Do not claim that Codex has inherited or replaced it.
+Important: the architecture document describes a static site plus audit tooling, not an already-established general-purpose CI/research scheduler. The existing daily `rewrite-polish-scanner` is a separate process. Do not claim Codex has inherited or replaced it.
 
 ## Work lanes
 
@@ -58,59 +58,51 @@ Rotate according to evidence and current bottlenecks; do not force a lane when t
 ### B. Literature
 - Search for primary papers, authoritative standards, datasets, and original documentation relevant to an identified claim.
 - Verify metadata and inspect the underlying source, not only search snippets or AI summaries.
-- Record exact locators and whether a source supports, contextualizes, competes with, or contradicts the claim.
+- Record exact theorem/equation/page/section locations and whether a source supports, contextualizes, competes with, or contradicts the claim.
 - Follow the schema and editorial rules in `works-cited/index.html`. Pending leads remain pending.
 
 ### C. Pipeline health
-- Review open GitHub issues and PRs, stale or blocked tasks, validation coverage, recent commits, and unresolved entries in `ISSUE_LOG.md`.
+- Review open and closed GitHub issues and PRs, stale or blocked tasks, validation coverage, recent commits, unresolved entries in `ISSUE_LOG.md`, and existing automation.
 - Detect duplicates before creating new work.
-- Give each new task a specific owner/next action where possible, evidence, priority rationale, dependencies, and closure criterion.
+- Give each new issue a specific investigation, affected target, evidence, dependencies, assumptions, priority rationale, and measurable closure criterion.
 - Do not manufacture backlog volume.
 
 ## Run procedure
 
-1. Confirm repository identity, branch, remote, and working-tree status.
-2. Fetch/inspect current `origin/main`; do not overwrite local work.
-3. Inspect open issues and PRs and changes since the last recorded run.
+1. Check for and use the connected GitHub integration when available. Do not assume a local clone is the only access route.
+2. Confirm repository identity, current branch, remote, working-tree status, and latest canonical `main`; preserve uncommitted local work.
+3. Inspect recent commits, open and closed issues, open PRs, research and validation records, literature references, and existing automation.
 4. Read relevant source records and confirm whether the apparent gap is already addressed elsewhere.
-5. Choose the highest-value lane based on impact, dependency centrality, and evidence quality.
-6. Either:
-   - record a finding in the operational report;
-   - create/update one or more justified GitHub issues;
-   - or implement a bounded change on a task branch and prepare a PR.
-7. Run relevant tests and record actual outputs.
-8. Leave a report using `templates/run-report.md`.
+5. Choose worthwhile work based on impact, dependency centrality, and evidence quality.
+6. Create GitHub issues for actionable, non-duplicate tasks. Issue creation is authorized without per-issue approval. If an existing record already tracks the work, report it and recommend updating that record instead.
+7. Perform only bounded implementation/validation work permitted by `AGENTS.md` and `policy.yml`; use task branches/worktrees and prepare PRs where appropriate.
+8. Run relevant checks and record actual outputs, or state why a check could not run.
+9. Report actual issue URLs, evidence and classifications, deduplication checks, blockers, inconclusive work, and the next recommended investigation.
 
 ## Cadence
 
-Recommended initial Codex Desktop Automation: **one daily run**, with the prompt in `prompts/daily-monitor.md`. Start in monitor-and-propose mode. After several successful runs and review of false positives, selectively enable issue creation and low-risk branch/PR work.
+Recommended Codex Desktop Automation: **one daily run**, using `prompts/daily-monitor.md`. The prompt defines the run; this repository file does not schedule it. If Codex Automations are unavailable in the installed app, run the same workflow manually. Do not substitute a ChatGPT Scheduled Task or Lampy cron and claim that it is a Codex Desktop Automation.
 
-If Codex Automations are unavailable in the installed app, run the same prompt manually. Do not substitute a ChatGPT Scheduled Task or a Lampy cron and claim that it is a Codex Desktop Automation.
+## Current rollout and authorization
 
-## Current rollout phases
-
-1. **Phase 1 — Instructions and read-only discovery:** root `AGENTS.md`, this runbook, and a daily monitor prompt.
-2. **Phase 2 — Controlled intake:** create evidence-backed issues and maintain deduplication.
-3. **Phase 3 — Bounded execution:** task branches/worktrees, reproducible tests, and draft PRs.
-4. **Phase 4 — Verified external computation:** only after a secure, documented Codex-to-Lampy route is tested.
-5. **Phase 5 — Expanded automation:** only after reviewing reports, permissions, failure handling, and resource limits.
-
-No GitHub Actions workflow, Lampy service, database integration, or external scheduler is installed by this specification.
+- **Authorized now:** repository monitoring, evidence-based issue creation, deduplication, operational reporting, and bounded task-branch/PR preparation.
+- **Not authorized:** direct writes to `main`, PR merges, force-pushes, branch deletion, theorem-status changes, mathematical-source edits, external control-document edits, expensive Lampy computation without explicit authorization and a verified route, or new scheduled services/GitHub Actions/cron.
+- **Still requires setup in Codex Desktop:** create the daily Automation using `prompts/daily-monitor.md`. This specification does not create or activate an Automation.
 
 ## Definition of a useful pipeline item
 
-A useful item must include:
+A useful issue must include:
 
 - a precise question or defect;
 - source paths and/or stable external references;
 - affected theorem, claim, page, or component;
-- evidence already available;
+- existing evidence;
 - dependencies and assumptions;
-- a proposed next action;
-- a closure criterion;
-- a status/evidence classification;
-- duplicate check against issues, PRs, ledgers, and research notes.
+- a proposed investigation;
+- a measurable closure criterion;
+- an evidence/status classification;
+- a duplicate check against issues, PRs, ledgers, research notes, and scanner tasks.
 
 ## Report location
 
-For the first rollout, place reports in Codex's task output or attach them to the related GitHub issue/PR. Do not commit a new daily report for every run: that creates repository noise. Commit durable findings only when they change the project's knowledge state.
+Use `templates/run-report.md` for each run. For the first rollout, reports may remain in Codex task output or be attached to a related issue/PR. Do not commit a new daily report for every run; commit durable findings only when they change the project's knowledge state.
