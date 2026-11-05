@@ -1,0 +1,67 @@
+version: 1
+repository: kitcosby/r-theory-rewrite
+canonical_branch: main
+
+mode:
+  initial: monitor_and_propose
+  allow_issue_creation_after_review: true
+  allow_task_branch_changes: true
+  allow_pull_request_creation: true
+  allow_merge: false
+  allow_direct_main_writes: false
+
+cadence:
+  recommended: daily
+  timezone: America/Los_Angeles
+  note: "Configure in Codex Desktop Automations; this file does not schedule a run."
+
+work_lanes:
+  - verification
+  - literature
+  - pipeline_health
+
+evidence_classes:
+  - Definition
+  - Established result
+  - Verified derivation
+  - Computationally verified
+  - Conjecture
+  - Heuristic
+  - Imported result
+  - Open problem
+  - Disputed
+
+site_claim_statuses:
+  preserve_without_reinterpretation:
+    - CP
+    - SC
+    - NC
+    - ST
+    - MA
+    - AX
+    - IN
+    - IC
+
+safety:
+  require_clean_worktree_before_task: true
+  require_task_branch_or_worktree: true
+  forbid_force_push: true
+  forbid_branch_deletion: true
+  forbid_auto_merge: true
+  forbid_theorem_status_promotion: true
+  forbid_external_control_document_edits_without_approval: true
+  forbid_lampy_compute_without_verified_route_and_authorization: true
+  forbid_new_github_actions_or_cron_without_approval: true
+  preserve_computed_artifacts: true
+
+literature:
+  inspect_primary_source_before_verified_entry: true
+  consensus_summary_is_not_primary_evidence: true
+  require_stable_identifier_or_link: true
+  require_claim_specific_relevance_assessment: true
+  retain_pending_status_when_unverified: true
+
+report:
+  template: pipeline/templates/run-report.md
+  commit_every_run_report: false
+  require_exact_commands_and_actual_outputs: true
