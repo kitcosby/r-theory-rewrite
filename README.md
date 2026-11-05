@@ -1,15 +1,15 @@
 # R Theory — A Visual Rewrite
 
 A book-by-book, intuition-first rewrite of the *R Theory* manuscript (Volumes
-0–IV, Books 0–22). Each book leads with pictures and intuition (live Desmos
+0–V, Books 0–24). Each book leads with pictures and intuition (live Desmos
 graphs), then the formal audit with proof statuses preserved.
 
 ## Read it
 
-Live site: <https://cosbykit-afk.github.io/r-theory-rewrite/>
+Live site: <https://kitcosby.github.io/r-theory-rewrite/>
 
 Start with the [series contents](contents/) (every book, every section) or
-the [series index](index/) (575 entries, A–Z). Or open `index.html` in a
+the [series index](index/) (A–Z). Or open `index.html` in a
 browser.
 
 The graphs are live [Desmos](https://www.desmos.com) calculators (internet
@@ -24,6 +24,8 @@ required); if Desmos fails to load, static PNG fallbacks in each book's
 - `book17/`–`book19/` — Volume IV: The Discrete Octant and the Computational
   Frontier
 - `book20/`–`book22/` — Volume 0: Exact Witnesses at the Physics Boundary
+- `book23/`–`book24/` — Volume V: The Physics Interface (Book 23: Chirality
+  Anchors — the C-1 Physics Interface; Book 24: The IO-Word Campaign)
 - `contents/` — series-wide table of contents, every section an anchor link
 - `index/` — series-wide keyword index
 - `tables/` — downloadable pre-computed tables (E8 30380 weight table,
@@ -32,9 +34,13 @@ required); if Desmos fails to load, static PNG fallbacks in each book's
 - `research/` — research companion notes
 - `validation/` — the numbered audit scripts behind the pages
   (PROVED / CHECKED / ASSERTED / INCOMPLETE)
+- `database/` — R Theory database snapshot (per-table SQL, reassemble
+  script, SAD architecture diagrams)
 - `manuscript/`, `pdf/` — source snapshots
-- `vol0/`, `vol4/`, `vol4-audit/`, `e8/`, `appendix/`, `title/` — supporting
-  material
+- `vol0/`, `vol4/`, `vol4-audit/`, `vol5/`, `e8/`, `appendix/`, `title/` —
+  supporting material
+- `ISSUE_LOG.md` — dated, append-only log of documentation, infrastructure,
+  and research findings against this repository, with closure criteria
 
 ## Status discipline
 
@@ -49,22 +55,25 @@ mathematics supports.
 ## Audits
 
 - **Volume I** (Books 0–6) — independent audit complete.
-- **Volume II** (Books 7–13) — pending: re-verification pass done, five open
-  items remain in the ledger.
+- **Volume II** (Books 7–13) — independent audit complete.
+- **Volume III** (Books 14–16) — independent audit complete.
+- **Volume IV** (Books 17–19) — audit in progress.
 
-## Status (2026-09-30)
+## Status (2026-11-04)
 
-- 575-entry series index (A–Z) and full series contents with anchor links.
+- Series index (A–Z) and full series contents with anchor links, covering
+  Books 0–24.
 - Live Desmos calculators in every book; static PNG fallbacks if Desmos
   fails to load.
 - Theorem-status mirror: `sync_status.py` parses the audit ledger into
-  `status_registry.json` (86 claims, Books 2–6) and injects "Independent
+  `status_registry.json` (195 claims) and injects "Independent
   audit verdicts" tables into the book pages; inline status pills link to
-  the canonical ledger.
-- R Theory database dump in `database/` (per-table SQL, reassemble script,
-  SAD architecture diagrams).
+  the canonical ledger. `derivations_registry.json` maps 86 audited claims
+  and the Appendix P research results (P-1..P-6) to their derivations.
+- R Theory database snapshot in `database/` refreshed 2026-11-04
+  (1,141 theorems, 199 dependency edges, 283 terms).
 - Site published via GitHub Pages; backup mirror in
-  [R-Theory](https://github.com/cosbykit-afk/R-Theory).
+  [R-Theory](https://github.com/kitcosby/R-Theory).
 
 ## Source
 
