@@ -1,76 +1,72 @@
 # R Theory — A Visual Rewrite
 
-A book-by-book, intuition-first rewrite of the *R Theory* manuscript (Volumes
-0–IV, Books 0–22). Each book leads with pictures and intuition (live Desmos
-graphs), then the formal audit with proof statuses preserved.
+A book-by-book, intuition-first rewrite and research companion for the *R Theory* manuscript. The current series covers **Books 0–24** across **Volumes I–V**, with **Volume 0** maintained as a separate witness track rather than a chronological continuation.
 
-## Read it
+The rewrite leads with visual intuition and interactive graphs, then records formal derivations, audit results, and the status of unresolved claims. Status labels are intentionally conservative: a numerical check, a symbolic check, an imported theorem, and a proof are not interchangeable.
 
-Live site: <https://cosbykit-afk.github.io/r-theory-rewrite/>
+## Read the series
 
-Start with the [series contents](contents/) (every book, every section) or
-the [series index](index/) (575 entries, A–Z). Or open `index.html` in a
-browser.
+- **Live site:** <https://cosbykit-afk.github.io/r-theory-rewrite/>
+- [Series contents](contents/) — book and section navigation
+- [Series index](index/) — searchable subject index
+- [Appendix proofs](appendix-proofs/) — proof and derivation materials
+- [Research companion](research/) — current research notes and open questions
+- [Issue log](ISSUE_LOG.md) — documentation, infrastructure, and research follow-ups
 
-The graphs are live [Desmos](https://www.desmos.com) calculators (internet
-required); if Desmos fails to load, static PNG fallbacks in each book's
-`graphs/` folder are shown instead.
+Live Desmos calculators require an internet connection. Where provided, static PNG fallbacks are available when the interactive graphs cannot load.
 
-## What's here
+## Series structure
 
-- `book0/`–`book6/` — Volume I (Books 0–6)
-- `book7/`–`book13/` — Volume II (Books 7–13)
-- `book14/`–`book16/` — Volume III (Books 14–16)
-- `book17/`–`book19/` — Volume IV: The Discrete Octant and the Computational
-  Frontier
-- `book20/`–`book22/` — Volume 0: Exact Witnesses at the Physics Boundary
-- `contents/` — series-wide table of contents, every section an anchor link
-- `index/` — series-wide keyword index
-- `tables/` — downloadable pre-computed tables (E8 30380 weight table,
-  R1/R2/R3a/R3b, and the matrix archive)
-- `guide/` — *A Guide to Creative Reason (after Euclid)*
-- `research/` — research companion notes
-- `validation/` — the numbered audit scripts behind the pages
-  (PROVED / CHECKED / ASSERTED / INCOMPLETE)
-- `manuscript/`, `pdf/` — source snapshots
-- `vol0/`, `vol4/`, `vol4-audit/`, `e8/`, `appendix/`, `title/` — supporting
-  material
+| Track | Books | Scope |
+|---|---:|---|
+| Volume I | 0–6 | Foundational rewrite |
+| Volume II | 7–13 | Extended development |
+| Volume III | 14–16 | Further mathematical development |
+| Volume IV | 17–19 | The Discrete Octant and the Computational Frontier |
+| Volume 0 | 20–22 | Exact Witnesses at the Physics Boundary; separate witness track |
+| Volume V | 23–24 | Later research and conditional constructions |
 
-## Status discipline
+Volume 0 is not presented as a chronological continuation of Volumes I–IV. Its witness material is not, by itself, evidence of a new physical law.
 
-Book pages label claims with the scope the audit earned — checked proof,
-completed symbolic check, completed numerical check, standard imported
-theorem, manuscript assertion, assumption/axiom, or incorrect/incomplete.
-Book 0 additionally preserves the original manuscript's own status tags
-(CERTIFIED etc.), as disclosed on that page; those are the manuscript's
-labels, not independent re-verification. Nothing is promoted beyond what the
-mathematics supports.
+## Repository map
 
-## Audits
+- `book0/`–`book24/` — book pages and supporting figures, where present
+- `contents/`, `index/` — series navigation and index
+- `appendix-proofs/`, `appendix/` — proof appendices and supporting material
+- `research/` — research companion, calibration, and open-gate notes
+- `validation/` — validation scripts and their documented coverage
+- `manuscript/`, `pdf/` — read-only source snapshots and exports
+- `scanner/` — scanner documentation, pointer, and historical scan log
+- `database/` — database exports, schema, and related documentation
+- `vol0/`, `vol4/`, `vol4-audit/`, `e8/`, `tables/`, `guide/` — supporting material
 
-- **Volume I** (Books 0–6) — independent audit complete.
-- **Volume II** (Books 7–13) — pending: re-verification pass done, five open
-  items remain in the ledger.
+Consult the repository tree for the authoritative current file inventory; not every directory contains a complete book-by-book implementation.
 
-## Status (2026-09-30)
+## Evidence and status discipline
 
-- 575-entry series index (A–Z) and full series contents with anchor links.
-- Live Desmos calculators in every book; static PNG fallbacks if Desmos
-  fails to load.
-- Theorem-status mirror: `sync_status.py` parses the audit ledger into
-  `status_registry.json` (86 claims, Books 2–6) and injects "Independent
-  audit verdicts" tables into the book pages; inline status pills link to
-  the canonical ledger.
-- R Theory database dump in `database/` (per-table SQL, reassemble script,
-  SAD architecture diagrams).
-- Site published via GitHub Pages; backup mirror in
-  [R-Theory](https://github.com/cosbykit-afk/R-Theory).
+Claims must retain the status justified by their evidence. In particular:
 
-## Source
+- **PROVED** — a proof is supplied within the stated assumptions and scope.
+- **CHECKED** — a defined symbolic, numerical, computational, or structural check passed; this is not automatically a proof.
+- **ASSERTED** — stated or imported as a premise without a derivation in the cited material.
+- **INCOMPLETE / OPEN** — required derivation, bridge, or evidence remains outstanding.
+- **REFUTED / INCORRECT-AS-STATED** — a claim fails as written, or is valid only under narrower conditions.
+- **IMPORTED** — relies on an external result; its source and applicability should be identified.
 
-Rewrite of the *R Theory* manuscript (read-only original; this rewrite lives
-here and does not modify it).
+Do not promote an assertion, numerical check, conditional result, or imported theorem into a proof without the corresponding argument. Preserve source labels and distinguish editorial reconstruction from the original manuscript.
 
-## License
+## Audit and coverage notes
+
+- The Volume IV audit summary reports **407 assertions**, including **18 incorrect-as-stated findings**, and `Δ_op(Volume IV)=∅`. A zero-failure audit-script run does not mean the manuscript contains zero errors.
+- Validation documentation describes detailed script coverage for Books 0–19 and the Volume IV overview. It does **not** establish equivalent script coverage for Books 20–24.
+- Volume 0 is a separate witness track; its essays should not be represented as establishing new physical law.
+- In Volume V, Book 23 sector occupancy is explicitly marked **ASSERTED**, not derived. Book 24 contains conditional IO-word algebra results, while the physical operator, contact-operator, physical C8-action, and ten-plane/measurement bridges remain open.
+- Database documentation records a snapshot of 1,141 theorem records, 199 dependency edges, and 283 terms. These are documented snapshot counts, not independently certified here by a fresh database reparse.
+
+For specific gaps and follow-up work, see [ISSUE_LOG.md](ISSUE_LOG.md).
+
+## Source and license
+
+This rewrite is a separate commentary and research layer. Original manuscript snapshots are retained as read-only references and are not modified by this project.
 
 Public domain — [The Unlicense](LICENSE).
