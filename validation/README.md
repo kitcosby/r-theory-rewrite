@@ -65,3 +65,10 @@ These scripts perform **completed numerical checks** and structural tests
   were renamed from `verify_figures.py` in the 2026-09-19 cleanup cycle;
   `validation/book17/verify_book17.py` was renamed the same way. The old
   names are gone.
+
+
+## Coverage boundary (updated 2026-11-04)
+
+The detailed per-book inventory above documents validation scripts for Books 0–19 and the Volume IV overview. It is not a complete validation inventory for Books 20–24 (Volume 0: Books 20–22; Volume V: Books 23–24). Do not infer that a later book is unvalidated in every external or working environment solely because it is absent from this directory; the narrower, verifiable statement is that equivalent coverage is not documented in this inventory.
+
+A script exiting successfully establishes only that its implemented assertions passed. It does not establish that every manuscript claim is correct, that all assumptions are justified, or that a numerical check is a proof. Preserve the claim-level status distinctions used by the books and their source ledgers.
