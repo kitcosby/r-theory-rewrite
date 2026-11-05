@@ -104,6 +104,24 @@ reports and close only as their criteria state.
   the input is dropped by Kit Cosby's ruling and the page revised
   accordingly. (Stepping-stone rule: an asserted input is discharged by
   derivation or dropped — it does not close by relabeling.)
+- **Status note (2026-11-05):** Review of `book0/index.html` §15 and the
+  original Volume I manuscript confirms that Theorem 0.III.T1 is scoped to
+  revised M0–M4 and the admitted T0–T3 orientation transformations. It
+  concludes that this candidate universe represents orientation but does
+  not derive a preferred physical chirality. Corollary 0.III.C2 explicitly
+  allows a later physics-interface interaction, observable, source,
+  boundary condition, or preparation law to distinguish the alternatives.
+  Accordingly, "derived from the core operators" is a viable closure route
+  only if it identifies a declared extension or physical input outside that
+  theorem's candidate universe; a derivation from M0–M4/T0–T3 alone is not
+  available under the theorem as stated. Book 23 §3 and
+  `book23/CHIRAL-ANCHOR-02.json` continue to classify occupancy as
+  ASSERTED-by-Kit. The Zeeman readout in Book 23 §2 establishes a
+  field-sensitive polarization observable, but no published C-1 receiving
+  block or bridge maps its sign to
+  `sign(Re(z) * Im(z))`. The referenced
+  `vol4/physics_interface/IMPORT_CONTRACTS_DRAFT.md` remains absent
+  (also INF-002). RES-001 remains Open; no status promotion is made.
 
 ### RES-002 — Book 24's physical operator/matrix identifications and measurement bridge remain open
 - **Classification:** Research
