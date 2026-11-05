@@ -1,10 +1,11 @@
-version: 1
+version: 2
 repository: kitcosby/r-theory-rewrite
 canonical_branch: main
 
 mode:
-  initial: monitor_and_propose
-  allow_issue_creation_after_review: true
+  initial: active_pipeline_monitoring_and_issue_intake
+  allow_issue_creation: true
+  require_evidence_and_deduplication: true
   allow_task_branch_changes: true
   allow_pull_request_creation: true
   allow_merge: false
@@ -48,11 +49,26 @@ safety:
   forbid_force_push: true
   forbid_branch_deletion: true
   forbid_auto_merge: true
+  forbid_direct_main_writes: true
   forbid_theorem_status_promotion: true
   forbid_external_control_document_edits_without_approval: true
   forbid_lampy_compute_without_verified_route_and_authorization: true
   forbid_new_github_actions_or_cron_without_approval: true
   preserve_computed_artifacts: true
+
+issue_creation:
+  enabled: true
+  require_actionable_evidence: true
+  check_open_and_closed_issues: true
+  check_pull_requests: true
+  check_research_ledgers_and_notes: true
+  check_scanner_tasks: true
+  require_precise_question_and_affected_target: true
+  require_dependencies_and_assumptions: true
+  require_investigation_plan: true
+  require_measurable_completion_criterion: true
+  require_evidence_classification: true
+  no_filler_or_quota: true
 
 literature:
   inspect_primary_source_before_verified_entry: true
@@ -65,3 +81,6 @@ report:
   template: pipeline/templates/run-report.md
   commit_every_run_report: false
   require_exact_commands_and_actual_outputs: true
+  list_created_issue_urls: true
+  summarize_deduplication_checks: true
+  list_blockers_and_inconclusive_work: true
