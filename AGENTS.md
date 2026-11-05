@@ -19,23 +19,24 @@ You are not authorized to certify R Theory as mathematically correct. Be ambitio
 
 1. Establish the current branch, clean/dirty working-tree state, remote, and latest fetched `origin/main` before making changes.
 2. Read the relevant source files and inspect existing conventions before adding files or changing structure.
-3. Check open issues, pull requests, recent commits, existing research records, and existing literature entries before creating duplicate work.
-4. State the question or operational gap precisely. Record evidence paths, affected claims, dependencies, and a concrete closure criterion.
+3. Check open and closed issues, pull requests, recent commits, existing research records, literature entries, scanner tasks, and automation before creating work.
+4. State the question or operational gap precisely. Record evidence paths, affected claims, dependencies, assumptions, and a concrete closure criterion.
 5. Separate observations from inference and proposals. Use explicit labels: Definition; Established result; Verified derivation; Computationally verified; Conjecture; Heuristic; Imported result; Open problem; Disputed.
-6. Where the website uses its own claim-status labels (CP, SC, NC, ST, MA, AX, IN, IC), preserve their meanings and provenance. Do not silently map one taxonomy onto the other.
+6. Where the website uses its own claim-status labels (CP, SC, NC, ST, MA, AX, IN, IC), preserve their meanings and provenance. Do not silently map this taxonomy onto another.
 7. Attempt counterexamples and negative checks where appropriate. Report failed, partial, timed-out, and inconclusive work without hiding it.
 8. Run the narrowest relevant tests first, then broader regression checks when safe. Record exact commands, environment, versions, inputs, outputs, precision/tolerances, and limitations.
 9. Leave a concise report with completed work, evidence, unresolved issues, and next steps.
 
-## Pipeline behavior
+## Pipeline behavior and issue creation
 
-- Monitor repository changes, issues, pull requests, validation coverage, research notes, bibliography records, and known open questions.
-- Populate the pipeline only with distinct, actionable items supported by repository evidence or a clearly identified research lead.
-- Prefer an existing issue, ledger entry, or research note over creating a duplicate.
-- A literature lead is not a verified reference. Inspect the original paper or authoritative source before describing its result as support. Record exact theorem/equation/page/section locations where possible.
+- Monitor repository changes, issues, pull requests, validation coverage, research notes, bibliography records, known open questions, and existing automation on every run.
+- Create GitHub issues for actionable, non-duplicate tasks when repository evidence or a clearly identified research lead supports them. Issue creation is authorized; do not wait for separate approval for each qualifying issue.
+- Each created issue must state: precise question/defect; affected claim, theorem, page, or component; source paths and existing evidence; dependencies and assumptions; proposed investigation; measurable completion criterion; and evidence classification.
+- Before creating an issue, compare it with open and closed issues, open PRs, research records, RES-* entries, audit ledgers, scanner tasks, and existing backlog items. Prefer updating or referencing an existing item where appropriate. Do not create duplicates.
+- Do not invent tasks to increase issue count. If no worthwhile, distinct task is supported, create no issue and say so.
+- A literature lead is not a verified reference. Inspect the original paper or authoritative source before describing its result as support. Consensus summaries are discovery aids, not primary evidence.
 - Update `works-cited/index.html` only after checking the source itself and following its existing entry conventions. Preserve pending/uncertain status when metadata or relevance is incomplete.
 - Do not invent citations, DOIs, theorem numbers, source metadata, test outputs, or completed work.
-- Do not generate filler tasks merely to keep the backlog nonempty. An empty queue is acceptable when no worthwhile work is available.
 
 ## Change and Git safety
 
@@ -53,12 +54,6 @@ A task is complete only when the requested change exists, relevant checks have a
 
 ## Communication
 
-Use concise, evidence-based reports. Distinguish:
-- Observed facts
-- Inferences
-- Proposed work
-- Executed work
-- Verified outcomes
-- Open questions and blockers
+Use concise, evidence-based reports. Distinguish observed facts, inferences, proposed work, executed work, verified outcomes, open questions, and blockers.
 
 For mathematical work, state the exact claim, assumptions, dependencies, argument, counterexample attempts, evidence classification, and remaining proof obligations.
