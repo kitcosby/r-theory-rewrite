@@ -126,3 +126,23 @@ Raw queue outputs are retained in gwen_training.calc_jobs for IDs 2719 and 2720.
 - **Not established:** physical E_k/Oprop, the physical C8 action, or any dial-to-observable law.
 
 The Book 24 page, Appendix P source fragment, assembled Appendix P page, and calibration page should state that equality is equivalent to C = 0, not γ = 0, and that the two-needle test sees only support-visible γ content. Existing PROVED/CHECKED labels and physical open gates are preserved.
+
+
+## Fixed-Z kernel bound for the 12-dimensional candidate space (2026-11-06)
+
+This is a rank-nullity result, not a numerical test. Assume the candidate space \u1d53 is a 12-dimensional real linear subspace of \(\mathbb R^{368\\times556}\), and, for this conditional statement, that \(\\gamma\) ranges over \u1d53. For a fixed nonzero \(Z\) of rank \(r\) with thin SVD \(Z=U\\Sigma V^T\), define
+
+~~~text
+Phi_Z : b -> M_r(R)
+Phi_Z(gamma) = U^T gamma V.
+~~~
+
+The SVD characterization already established gives \(C=0\iff\\Phi_Z(\\gamma)=0\). Since \(\dim M_r(\\mathbb R)=r^2\), rank-nullity yields
+
+~~~text
+dim ker(Phi_Z) >= max(0, 12 - r^2).
+~~~
+
+Consequently, for every fixed \(Z\) of rank 1, 2, or 3, the 12-dimensional ansatz contains a nonzero blind element; the kernel dimension is at least 11, 8, or 3, respectively. For rank \(r\\ge4\), dimension counting alone does not force a nontrivial kernel; injectivity is possible but has not been established for the actual ansatz.
+
+This conclusion is conditional on \u1d53 being the admissible linear space for the dial's \(\\gamma\). It does not establish that a physical transfer matrix has rank at most 3, nor that the 12-dimensional candidate space is the final physical Oprop space. For a fixed physical \(Z\) of rank at least 4, the next test requires the actual 12 basis matrices and the physical \(Z\), then an exact rank computation for the resulting compression map. Those artifacts were not found in the searched public tree or Lampy workspace paths. No Gwen job was submitted: the rank-nullity argument is exact and a numerical run would add no evidence.
