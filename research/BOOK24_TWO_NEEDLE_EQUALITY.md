@@ -130,7 +130,7 @@ The Book 24 page, Appendix P source fragment, assembled Appendix P page, and cal
 
 ## Fixed-Z kernel bound for the 12-dimensional candidate space (2026-11-06)
 
-This is a rank-nullity result, not a numerical test. Assume the candidate space \(\mathfrak b\) is a 12-dimensional real linear subspace of \(\mathbb R^{368\times556}\), and, for this conditional statement, that \(\gamma\) ranges over \mathfrak b. For a fixed nonzero \(Z\) of rank \(r\) with thin SVD \(Z=U\Sigma V^T\), define
+This is a rank-nullity result, not a numerical test. Assume the candidate space \(\mathfrak b\) is a 12-dimensional real linear subspace of \(\mathbb R^{368\times556}\), and, for this conditional statement, that \(\gamma\) ranges over \(\mathfrak b\). For a fixed nonzero \(Z\) of rank \(r\) with thin SVD \(Z=U\Sigma V^T\), define
 
 ~~~text
 Phi_Z : b -> M_r(R)
