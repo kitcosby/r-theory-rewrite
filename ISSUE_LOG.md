@@ -152,3 +152,10 @@ reports and close only as their criteria state.
 - **Evidence:** Volume IV original manuscript, especially lines 742–750, 1669, and 1964–1970; Volume IV audit ledgers; Notion IC-19 and IC-20; GitHub issue [#47](https://github.com/kitcosby/r-theory-rewrite/issues/47) and cross-system issue [#53](https://github.com/kitcosby/r-theory-rewrite/issues/53).
 - **Finding:** The physical 54 is a constituent of the 135, not a linear constituent of the 1820 under the standard embedding. The intended route is a quadratic map Sym^2(1820) -> 135 followed by a rank-54 projection inside 135. The current skeleton neither constructs this map nor applies P_54; its “54x54 or embedding in 1820” input is inconsistent with the stated route.
 - **Closure criteria:** give the explicit equivariant quadratic map, basis/normalization, and rank-54 projector (or equivalent inclusion/projection pair); verify intertwining and idempotence; then recompute S_F. Keep the S_F/N_1820 numerical gate OPEN until then.
+
+
+### RES-003 update — fixed-Z kernel bound (2026-11-06)
+- **Classification:** exact conditional linear-algebra derivation.
+- **Assumptions:** the candidate space \u1d53 is a 12-dimensional real linear subspace of the 368×556 gamma-matrix space, gamma ranges over that space, and Z is fixed with rank r.
+- **Finding:** with thin SVD Z=UΣVᵀ, the compression map Φ_Z: b→M_r(R), γ↦UᵀγV has kernel equal to the two-needle blind set. Rank-nullity gives dim ker Φ_Z ≥ max(0,12−r²). Thus every fixed Z of rank 1, 2, or 3 has a nonzero b-blind element, with lower bounds 11, 8, and 3. For r≥4, dimension counting alone does not decide injectivity.
+- **Limit:** this does not establish the physical rank of Z or that b is the final physical Oprop space. The actual b basis and fixed physical Z are still required for an exact rank test. No queue job was submitted because this is a direct rank-nullity proof.
