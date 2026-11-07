@@ -28,7 +28,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE_RESTRICTION = "cosbykit-afk.github.io/r-theory-rewrite"
+SITE_RESTRICTION = "kitcosby.github.io/r-theory-rewrite"
 
 VOLUMES = [
     ("Volume 0", [20, 21, 22], "vol0/"),
