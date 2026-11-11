@@ -172,7 +172,7 @@ a.taglink:focus-visible{outline:3px solid #0e7c86;outline-offset:2px;border-radi
  form.addEventListener('submit',function(e){
   var v=term.value.trim();
   if(!v){e.preventDefault();term.focus();say('Enter a search term');return;}
-  q.value='site:cosbykit-afk.github.io/r-theory-rewrite '+v;
+  q.value='site:kitcosby.github.io/r-theory-rewrite '+v;
  });
  var tg=document.getElementById('rthLargeText');
  tg.checked=document.documentElement.classList.contains('rth-large-text');
