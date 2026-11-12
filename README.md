@@ -31,7 +31,7 @@ required); if Desmos fails to load, static PNG fallbacks in each book's
 - `tables/` — downloadable pre-computed tables (E8 30380 weight table,
   R1/R2/R3a/R3b, and the matrix archive)
 - `guide/` — *A Guide to Creative Reason (after Euclid)*
-- `research/` — research companion notes
+- `research/` — research companion notes, including the [State of R Theory baseline](research/STATE_OF_R_THEORY_2026-11-05.md) and [Book 24 two-needle equality audit](research/BOOK24_TWO_NEEDLE_EQUALITY.md).
 - `validation/` — the numbered audit scripts behind the pages
   (PROVED / CHECKED / ASSERTED / INCOMPLETE)
 - `works-cited/` — master bibliography and source register, including
@@ -73,7 +73,7 @@ corpus, not a duplicate of the page-level scripts in `validation/`.
 Keep its ledgers and source records in that repository unless a future,
 reviewed migration establishes a clear benefit.
 
-## Status (2026-11-04)
+## Status (2026-11-05)
 
 - Series index (A–Z) and full series contents with anchor links, covering
   Books 0–24.

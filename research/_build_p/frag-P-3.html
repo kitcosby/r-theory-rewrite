@@ -72,11 +72,11 @@ D_B − m₀⁻²D₈ = 2(m₀m₂)⁻¹·C
 <pre>
 D_W·D_B = D₈²      exactly.
 </pre>
-<p>Dressed (γ ≠ 0, <i>C</i> ≥ 0):</p>
+<p>For the archived positive reference values <i>m</i><sub>0</sub> = 2 and <i>m</i><sub>2</sub> = 5 (and, more generally, for same-sign nonzero parameters):</p>
 <pre>
-D_W·D_B = 4C² + 2(m₂/m₀ + m₀/m₂)·C·D₈ + D₈² ≥ D₈²,
+D_W·D_B − D₈² = 4C² + 2(m₂/m₀ + m₀/m₂)·C·D₈ ≥ 0.
 </pre>
-<p>since <i>m₂</i>/<i>m₀</i> + <i>m₀</i>/<i>m₂</i> ≥ 2 and every term is nonnegative. The inequality <i>D_W</i>·<i>D_B</i> ≥ <i>D₈</i>² is the dial test for O-flip content once the dials are measured: equality on bare witnesses, strictness signals dressed-O content (cf. the calibration's bare-vs-dressed open slot, <a href="../research/calibration.html#open-slots">open slot 3</a>).</p>
+<p>Since D₈ = 0 iff Z = 0 (which also forces C = 0), equality holds exactly when C = 0; strictness holds exactly when C &gt; 0. This is not equivalent to γ ≠ 0. If Z = UΣVᵀ is a thin singular-value decomposition, then C = ||Σ UᵀγV Σ||<sub>F</sub><sup>2</sup>, so the exact blind set is UᵀγV = 0 (equivalently, P<sub>col</sub>(Z) γ P<sub>row</sub>(Z) = 0), where the P terms project onto the column and row spaces of Z. A nonzero γ can lie in this set: Z = E₁₁ and γ = E₁₂ give Z ≠ 0, γ ≠ 0, D₈ = 1, C = 0, and D_W·D_B = D₈². The product therefore detects only the γ component visible on the active left/right singular supports of Z. The inverse in D_B excludes m₀m₂ = 0; the displayed AM–GM inequality requires m₀m₂ &gt; 0. The physical E_k/Oprop identification remains open.</p>
 <p class="prov">Elementary algebra on the run-31 T3/T4 closed forms (<code>DIAL_OFLIP_VISIBILITY.md</code>); cross-check derivation from <code>DIAL_FLIPONLY_O.md</code> + <code>DIAL_MODE_PATTERN.md</code> runs 33–34.</p>
 
 <h3 id="P-3-calp6">CAL-P6 — Manuscript Oprop-word vanishes on 𝔟 (bare E), any <i>M_e</i> <span class="tag CP">checked proof</span></h3>
