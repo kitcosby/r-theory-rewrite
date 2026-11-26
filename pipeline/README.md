@@ -88,6 +88,7 @@ Recommended Codex Desktop Automation: **one daily run**, using `prompts/daily-mo
 - **Authorized now:** repository monitoring, evidence-based issue creation, deduplication, operational reporting, and bounded task-branch/PR preparation.
 - **Not authorized:** direct writes to `main`, PR merges, force-pushes, branch deletion, theorem-status changes, mathematical-source edits, external control-document edits, expensive Lampy computation without explicit authorization and a verified route, or new scheduled services/GitHub Actions/cron.
 - **Still requires setup in Codex Desktop:** create the daily Automation using `prompts/daily-monitor.md`. This specification does not create or activate an Automation.
+- **Setup scope:** scheduling is per user and workspace in the target Codex Desktop installation; verify the Automation in that exact installation. A ChatGPT Scheduled Task or Lampy cron is a separate scheduler and does not satisfy this Codex Desktop setup step.
 
 ## Definition of a useful pipeline item
 
