@@ -97,8 +97,8 @@
 <p>Setup: E<sub>t</sub> = Π<sub>E</sub> + F(Z), Z real 368×556 pure B↔O flip, ε-odd; O<sub>d</sub> = Π₂ + F(γ), γ any real 368×556; M<sub>e</sub> = diag(m₀I₃₆₈, m₂I₅₅₆, M<sub>rest</sub>). All three closed forms are <span class="tag proved">PROVED</span> by exact block algebra (runs 30–31), conditional on the established witnesses/flip theorem/𝔟 content:</p>
 <ul>
 <li><strong>D₈</strong> := Tr(E<sub>t</sub>Π₀E<sub>t</sub>O<sub>d</sub>E<sub>t</sub>Π₀E<sub>t</sub>O<sub>d</sub>) = ‖Z<sup>T</sup>Z‖<sup>2</sup><sub>F</sub> — <strong>blind to γ</strong> (T1).</li>
-<li><strong>D<sub>W</sub></strong> := Tr(E<sub>t</sub>M<sub>e</sub>E<sub>t</sub>O<sub>d</sub>E<sub>t</sub>M<sub>e</sub>E<sub>t</sub>O<sub>d</sub>) = 2m₀m₂·C + m₀²·D₈ — <strong>sees γ</strong> (T3), C := Tr(ZZ<sup>T</sup>γZ<sup>T</sup>Zγ<sup>T</sup>) ≥ 0.</li>
-<li><strong>D<sub>B</sub></strong> := Tr(E<sub>t</sub>M<sub>e</sub><sup>−1</sup>E<sub>t</sub>O<sub>d</sub>E<sub>t</sub>M<sub>e</sub><sup>−1</sup>E<sub>t</sub>O<sub>d</sub>) = 2(m₀m₂)<sup>−1</sup>·C + m₀<sup>−2</sup>·D₈ — <strong>sees γ</strong> (T4).</li>
+<li><strong>D<sub>W</sub></strong> := Tr(E<sub>t</sub>M<sub>e</sub>E<sub>t</sub>O<sub>d</sub>E<sub>t</sub>M<sub>e</sub>E<sub>t</sub>O<sub>d</sub>) = 2m₀m₂·C + m₀²·D₈ — <strong>depends on the support-visible functional</strong> C :=  Tr(ZZ<sup>T</sup>γZ<sup>T</sup>Zγ<sup>T</sup>) ≥ 0.</li>
+<li><strong>D<sub>B</sub></strong> := Tr(E<sub>t</sub>M<sub>e</sub><sup>−1</sup>E<sub>t</sub>O<sub>d</sub>E<sub>t</sub>M<sub>e</sub><sup>−1</sup>E<sub>t</sub>O<sub>d</sub>) = 2(m₀m₂)<sup>−1</sup>·C + m₀<sup>−2</sup>·D₈ — <strong>depends on the same support-visible functional C</strong> (T4).</li>
 </ul>
 <p><strong>Why this calibrates a missing input:</strong> the m₀/m₂ decoupling theorem (omnibus Q4) <span class="tag proved">PROVES</span> the [M<sub>e</sub>,M<sub>ε</sub>] commutator is independent of m₀,m₂ for all real m₀,m₂ — so no commutator measurement can ever select them. The dials <em>do</em> see m₀,m₂. The dial ratios are therefore the selecting observables: "m₀/m₂ unselected" becomes a measurement problem, not a free choice.</p>
 </div>
@@ -113,18 +113,18 @@
 <dt>Prediction</dt>
 <dd>With r<sub>W</sub> := D<sub>W</sub>/D₈, r<sub>B</sub> := D<sub>B</sub>/D₈, R := C/D₈ ≥ 0:<br>
 <code>r_W = m₀² + 2m₀m₂·R ≥ m₀²</code>, <code>r_B = m₀⁻² + 2(m₀m₂)⁻¹·R ≥ m₀⁻²</code>.<br>
-<strong>Bare (R = 0):</strong> <code>m₀² = D_W/D₈</code> exactly, and <code>D_W·D_B = D₈²</code> exactly.<br>
-<strong>Dressed:</strong> <code>D_W·D_B ≥ D₈²</code>, equality iff R = 0.<br>
+<strong>R = 0 (support-blind):</strong> <code>m₀² = D_W/D₈</code> exactly, and <code>D_W·D_B = D₈²</code> exactly.<br>
+<strong>Support-visible dressed (R &gt; 0):</strong> <code>D_W·D_B &gt; D₈²</code>; equality iff R = 0, which does not imply γ = 0.<br>
 <strong>Cross-ratio (exact, dressed):</strong> <code>(D_W − m₀²D₈)/(D_B − m₀⁻²D₈) = (m₀m₂)²</code>.<br>
 The Z-scale cancels in every ratio — m₀ and m₀m₂ calibrate independently of Z.</dd>
 <dt>Derivation</dt>
 <dd><span class="tag proved">PROVED</span> T1/T3/T4 (exact block algebra, runs 30–31). Verified on run-31 <span class="tag checked">CHECKED</span> numbers (m₀=2, m₂=5): dressed draw gives D<sub>W</sub>·D<sub>B</sub> = 3523 ≥ 2401 = D₈²; cross-ratio = 100.0 = (m₀m₂)²; bare draw gives D<sub>W</sub>·D<sub>B</sub> = 2401 = D₈² exactly, D<sub>W</sub>/D₈ = 4.0 = m₀², D<sub>B</sub>/D₈ = 0.25 = m₀⁻².</dd>
 <dt>Constrains</dt>
-<dd>Whether the E<sub>t</sub>/O<sub>d</sub> candidate block model can describe physical dials at all; secondarily whether physical γ-content (R &gt; 0) is present (strict inequality) or absent (equality).</dd>
+<dd>Whether the E<sub>t</sub>/O<sub>d</sub> candidate block model can describe physical dials at all; secondarily whether support-visible γ-content (R &gt; 0) is present (strict inequality); equality only establishes R = 0 and does not exclude nonzero γ in the blind set.</dd>
 <dt>Needs</dt>
 <dd>Physical E<sub>k</sub> and Oprop witnesses with the established block shapes (both <span class="tag incomplete">OPEN</span>), plus the dial↔observable identifications (open slots below).</dd>
 <dt>Falsification</dt>
-<dd>Measured dials violating <code>D_W·D_B ≥ D₈²</code> kill the candidate block framework itself — not just parameter values. A strict, stable inequality confirms γ-content; stable equality confirms the bare reading.</dd>
+<dd>Measured dials violating <code>D_W·D_B ≥ D₈²</code> kill the candidate block framework itself — not just parameter values. A strict, stable inequality confirms support-visible γ-content (C &gt; 0); stable equality establishes C = 0 but does not rule out nonzero γ in the blind set.</dd>
 <dt>Scope notes</dt>
 <dd>Conditional on the E<sub>t</sub>/O<sub>d</sub> candidate models; m₀=2, m₂=5 are archived reference values, not physical selections; g, position↔k, ε-pattern adopted/<span class="tag asserted">ASSERTED</span>.</dd>
 </dl>
@@ -249,7 +249,7 @@ The Z-scale cancels in every ratio — m₀ and m₀m₂ calibrate independently
 <ol>
 <li><strong>Dial↔observable identifications</strong> for D₈, D<sub>W</sub>, D<sub>B</sub> — which measured quantities each dial corresponds to.</li>
 <li><strong>Unit declarations</strong> for m₀, m₂ — reference <span class="tag asserted">FIXED</span> by Axiom One: the system rest energy mc² (μᵢ&nbsp;:=&nbsp;mᵢ/m per SI-DIMLESS-01). Numerical values: <span class="tag incomplete">OPEN</span>.</li>
-<li><strong>Bare vs dressed:</strong> is physical γ-content (R &gt; 0) present? The inequality D<sub>W</sub>·D<sub>B</sub> ≥ D₈² tests this once dials are measured.</li>
+<li><strong>Support-visible γ-content:</strong> is R &gt; 0? Equality at R = 0 does not exclude nonzero γ in the blind set. The inequality D<sub>W</sub>·D<sub>B</sub> ≥ D₈² tests this once dials are measured.</li>
 <li><strong>Falsification conditions</strong> for the calibration as a whole.</li>
 <li><strong>ρ<sub>E</sub> := mc²/E₂₁</strong> — system rest energy in anchor units. Reference fixed by Axiom One; the dimensionless ratio itself: <span class="tag incomplete">OPEN</span> (Kit's call).</li>
 <li><strong>ρ<sub>V</sub> := V<sub>min</sub>/λ₂₁³</strong> — minimum volume in anchor units (discrete scaler). The dimensionless ratio itself: <span class="tag incomplete">OPEN</span> (Kit's call; conditional reading E/V = mc²/V<sub>min</sub> also his call).</li>
@@ -263,5 +263,10 @@ The Z-scale cancels in every ratio — m₀ and m₀m₂ calibrate independently
 <p>R Theory — Calibration Predictions. Status discipline: proved / checked / asserted / incomplete / refuted for claims; open / confirmed / falsified for predictions — nothing rounded up or down.</p>
 <p>Christopher Cosby · <a href="https://orcid.org/0009-0003-5392-2359">ORCID 0009-0003-5392-2359</a></p>
 </footer>
+
+<section id="two-needle-equality-caveat">
+<h2>Two-needle equality caveat (2026-11-05)</h2>
+<p>For nonzero Z with thin singular-value decomposition Z = UΣV<sup>T</sup>, C = ||ΣU<sup>T</sup>γVΣ||<sub>F</sub><sup>2</sup>. Thus R = C/D<sub>8</sub> = 0 iff U<sup>T</sup>γV = 0. This can hold for nonzero γ. The two-needle product tests support-visible γ content, not whether γ is globally zero; stable equality does not certify a physically bare Oprop. See <a href="../appendix-proofs/#P-3">Appendix P-3</a>.</p>
+</section>
 </body>
 </html>
